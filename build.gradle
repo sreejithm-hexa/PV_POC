@@ -24,8 +24,8 @@ group = 'database'
 version = '0.0.1-SNAPSHOT'
 
 flyway {
-    url = 'jdbc:h2:mem:mydb'
-    user = 'myUsr'
-    password = 'mySecretPwd'
-    schemas = ['schema1', 'schema2', 'schema3']
+    url = 'jdbc:mysql://3.22.94.249:3306/db'
+    user = '${dbusername}'
+    password = '${dbpassword}'
+    //schemas = ['schema1', 'schema2', 'schema3']
 }
