@@ -4,3 +4,28 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/7.4/samples
  */
+buildscript {
+    repositories {
+        maven {
+            url "http://repo1.mavne.org/maven2"
+        }
+    }
+    dependencies {
+        classpath "mysql:mysql-connector-java:5.1.6"
+        runtimeOnly group: 'org.flywaydb', name: 'flyway-gradle-plugin', version: '3.0'
+    }
+}
+
+plugins {
+    id "org.flywaydb.flyway" version "8.5.0"
+}
+
+group = 'database'
+version = '0.0.1-SNAPSHOT'
+
+flyway {
+    url = 'jdbc:h2:mem:mydb'
+    user = 'myUsr'
+    password = 'mySecretPwd'
+    schemas = ['schema1', 'schema2', 'schema3']
+}
