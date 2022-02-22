@@ -13,15 +13,10 @@ buildscript {
     }
     dependencies {
         
-        //classpath 'mysql:mysql-connector-java:8.0.28'
-        //classpath 'org.liquibase:liquibase-core:3.4.1'
-//classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
-            
-            classpath 'org.liquibase:liquibase-core:3.4.1'
-    classpath "org.liquibase:liquibase-gradle-plugin:1.1.1"
-classpath 'mysql:mysql-connector-java:5.1.13'
+        classpath 'mysql:mysql-connector-java:8.0.28'
+        classpath 'org.liquibase:liquibase-core:3.4.1'
+        classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
     }
-
 }
 
 
