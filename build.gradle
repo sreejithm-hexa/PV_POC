@@ -34,8 +34,7 @@ def changeLog = "/src/main/db/migration/changelog.xml"
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
-task('qa') << {
-println "executing db"
+
 liquibase {
     activities {
          main {
@@ -46,7 +45,7 @@ liquibase {
         }
     }
  }
-}
+
 
 
 
