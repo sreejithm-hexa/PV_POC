@@ -10,7 +10,6 @@ buildscript {
             url "https://repo1.maven.org/maven2"
         }
         mavenCentral()
-        gradlePluginPortal()
     }
     dependencies {
         
@@ -26,12 +25,12 @@ plugins {
   id 'org.liquibase.gradle' version '2.1.0'
 }
 
-dependencies {
+/*dependencies {
   liquibaseRuntime 'org.liquibase:liquibase-core:4.5.0'
 }
+*/
 
-
-//def changeLog = "/src/main/db/changelog.xml"
+def changeLog = "/src/main/db/migration/changelog.xml"
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
