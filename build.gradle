@@ -55,7 +55,7 @@ liquibase {
       //Properties properties = new Properties()
       //properties.load(new FileInputStream(propsFile))
       changeLogFile 'src/main/resources/db/migration/changelog.xml'
-      classpath 'src/mysql-connector-java-8.0.22.jar'
+      //classpath 'src/mysql-connector-java-8.0.22.jar'
       driver 'com.mysql.jdbc.Driver'
       url 'jdbc:mysql://3.20.222.112:3306/test'
       username 'sreejith'
