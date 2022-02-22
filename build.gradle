@@ -34,9 +34,11 @@ dependencies {
   liquibaseRuntime 'info.picocli:picocli:4.6.1'
   liquibaseRuntime 'mysql:mysql-connector-java:5.1.34'
 }
-ext.springProps = new Properties()
+
+
+/*ext.springProps = new Properties()
 InputStream is = new FileInputStream("liquibase.properties")
-springProps.load(is)
+springProps.load(is)*/
 
 
 
@@ -46,8 +48,21 @@ group = 'database'
 version = '0.0.1-SNAPSHOT'
 
 
-
 liquibase {
+  activities {
+    main {
+        File propsFile = new File("liquibase.properties")
+      Properties properties = new Properties()
+      properties.load(new FileInputStream(propsFile))
+      changeLogFile 'src/main/db/migration/changelog-.xml'
+      url '${url}'
+      username '${username}'
+      password '${password}'
+    }
+    runList = main
+  }
+}
+/*liquibase {
     activities {
          main {
             //changeLogFile '/src/main/resources/db/migration/changelog.xml'
@@ -61,7 +76,7 @@ liquibase {
             password springProps['spring.datasource.password']
         }
     }
- }
+ }*/
 
 
 
