@@ -55,6 +55,7 @@ liquibase {
             //username 'sreejith'
             //password '@Admin123'
             url springProps['spring.datasource.url']
+            driver springProps['spring.datasource.driver']
             username springProps['spring.datasource.username']
             password springProps['spring.datasource.password']
         }
