@@ -36,6 +36,9 @@ dependencies {
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
+configurations {
+  liquibaseRuntime.extendsFrom runtime
+}
 
 liquibase {
     activities {
