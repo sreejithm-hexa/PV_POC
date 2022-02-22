@@ -54,7 +54,7 @@ liquibase {
         File propsFile = new File("liquibase.properties")
       Properties properties = new Properties()
       properties.load(new FileInputStream(propsFile))
-      changeLogFile 'src/main/db/migration/changelog-.xml'
+      changeLogFile 'src/main/resources/db/migration/changelog.xml'
       url '${url}'
       username '${username}'
       password '${password}'
