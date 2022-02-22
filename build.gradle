@@ -61,7 +61,7 @@ liquibase {
       username 'sreejith'
       password '@Admin123'
     }
-   runList = main
+   //runList = main
   }
 }
 /*liquibase {
