@@ -17,9 +17,7 @@ buildscript {
         classpath 'org.liquibase:liquibase-core:3.4.1'
         classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
     }
-    configurations {
-         liquibaseRuntime.extendsFrom runtime
-    }
+
 }
 
 
@@ -33,13 +31,13 @@ version = '0.0.1-SNAPSHOT'
 
 
 liquibase {
-  activities {
-     main {
-  changeLogFile '/src/main/resources/db/migration/changelog.xml'
-  url 'jdbc:mysql://3.20.222.112:3306/db1'
-  username 'sreejith'
-  password '@Admin123'
-      }
+    activities {
+         main {
+            changeLogFile '/src/main/resources/db/migration/changelog.xml'
+            url 'jdbc:mysql://3.20.222.112:3306/db1'
+            username 'sreejith'
+            password '@Admin123'
+        }
     }
  }
 
