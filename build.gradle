@@ -12,9 +12,9 @@ buildscript {
          //mavenCentral()
     }
     dependencies {
-        implementation 'mysql:mysql-connector-java:8.0.28'
-        //classpath "org.flywaydb:flyway-gradle-plugin:5.2.4"
-        implementation 'org.flywaydb:flyway-core:8.5.0'
+        classpath 'mysql:mysql-connector-java:8.0.28'
+        classpath "org.flywaydb:flyway-gradle-plugin:5.2.4"
+        //classpath 'org.flywaydb:flyway-core:8.5.0'
     }
 }
 
