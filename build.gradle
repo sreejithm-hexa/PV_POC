@@ -9,8 +9,8 @@ buildscript {
         maven {
             url "https://repo1.maven.org/maven2"
         }
-        mavenCentral()
-        gradlePluginPortal()
+        //mavenCentral()
+     
     }
     dependencies {
         classpath 'mysql:mysql-connector-java:8.0.28'
