@@ -51,13 +51,15 @@ version = '0.0.1-SNAPSHOT'
 liquibase {
   activities {
     main {
-        File propsFile = new File("liquibase.properties")
-      Properties properties = new Properties()
-      properties.load(new FileInputStream(propsFile))
+        //File propsFile = new File("liquibase.properties")
+      //Properties properties = new Properties()
+      //properties.load(new FileInputStream(propsFile))
       changeLogFile 'src/main/resources/db/migration/changelog.xml'
-      url '${url}'
-      username '${username}'
-      password '${password}'
+      classpath 'src/mysql-connector-java-8.0.22.jar'
+      driver 'com.mysql.jdbc.Driver'
+      url 'jdbc:mysql://3.20.222.112:3306/test'
+      username 'sreejith'
+      password '@Admin123'
     }
     runList = main
   }
