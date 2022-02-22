@@ -34,6 +34,7 @@ liquibase {
   username 'sreejith'
   password '@Admin123'
       }
+    }
  }
 
 
