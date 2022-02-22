@@ -6,9 +6,10 @@
  */
 buildscript {
     repositories {
-        maven {
+        /*maven {
             url "http://repo1.mavne.org/maven2"
-        }
+        }*/
+         mavenCentral()
     }
     dependencies {
         implementation 'mysql:mysql-connector-java:8.0.28'
