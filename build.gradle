@@ -12,7 +12,7 @@ buildscript {
     }
     dependencies {
         classpath "mysql:mysql-connector-java:5.1.6"
-        runtimeOnly group: 'org.flywaydb', name: 'flyway-gradle-plugin', version: '3.0'
+        //runtimeOnly group: 'org.flywaydb', name: 'flyway-gradle-plugin', version: '3.0'
     }
 }
 
