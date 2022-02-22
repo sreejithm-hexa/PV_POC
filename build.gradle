@@ -16,6 +16,7 @@ buildscript {
         classpath 'mysql:mysql-connector-java:8.0.28'
         classpath 'org.liquibase:liquibase-core:3.4.1'
         classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
+        liquibaseRuntime 'info.picocli:picocli:4.6.1'
     }
 }
 
@@ -35,9 +36,6 @@ plugins {
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
-configurations {
-    configurations.liquibaseRuntime.extendsFrom configurations.runtime
-}
 
 
 liquibase {
