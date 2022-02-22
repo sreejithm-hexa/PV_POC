@@ -25,7 +25,7 @@ version = '0.0.1-SNAPSHOT'
 
 flyway {
     url = 'jdbc:mysql://3.22.94.249:3306/db'
-    user = "${username}"
-    password = "${password}"
+    user = "sreejith" //"${username}"
+    password = "@Admin123" //"${password}"
     //schemas = ['schema1', 'schema2', 'schema3']
 }
