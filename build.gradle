@@ -48,7 +48,7 @@ liquibase {
     activities {
          main {
             changeLogFile '/src/main/resources/db/migration/changelog.xml'
-            url 'jdbc:mysql://3.20.222.112:3306/db1'
+            url 'jdbc:mysql://3.22.94.249:3306/db1'
             username 'sreejith'
             password '@Admin123'
         }
