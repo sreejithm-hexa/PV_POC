@@ -47,7 +47,7 @@ version = '0.0.1-SNAPSHOT'
 
 
 
-/*liquibase {
+liquibase {
     activities {
          main {
             //changeLogFile '/src/main/resources/db/migration/changelog.xml'
@@ -59,7 +59,7 @@ version = '0.0.1-SNAPSHOT'
             password springProps['spring.datasource.password']
         }
     }
- }*/
+ }
 
 
 
