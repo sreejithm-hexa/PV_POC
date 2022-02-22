@@ -17,9 +17,6 @@ buildscript {
         classpath 'org.liquibase:liquibase-core:3.4.1'
         classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
     }
-    configurations {
-    liquibaseRuntime.extendsFrom runtimeClasspath
-}
 }
 
 
@@ -38,6 +35,12 @@ plugins {
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
+configurations {
+    liquibaseRuntime.extendsFrom runtimeClasspath
+}
+dependencies {
+    liquibaseRuntime sourceSets.main.output
+}
 
 liquibase {
     activities {
