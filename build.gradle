@@ -36,11 +36,9 @@ group = 'database'
 version = '0.0.1-SNAPSHOT'
 
 configurations {
-    liquibaseRuntime.extendsFrom runtimeClasspath
+    configurations.liquibaseRuntime.extendsFrom configurations.runtime
 }
-dependencies {
-    liquibaseRuntime sourceSets.main.output
-}
+
 
 liquibase {
     activities {
