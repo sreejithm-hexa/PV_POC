@@ -59,7 +59,7 @@ liquibase {
       username '${username}'
       password '${password}'
     }
-    //runList = main
+    runList = main
   }
 }
 /*liquibase {
