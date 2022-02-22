@@ -21,6 +21,8 @@ plugins {
   id 'org.liquibase.gradle' version '2.1.0'
 }
 
+//def changeLog = "/src/main/db/changelog.xml"
+
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
