@@ -18,6 +18,9 @@ buildscript {
         classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
          liquibaseRuntime sourceSets.main.output
     }
+    configurations {
+    liquibaseRuntime.extendsFrom runtimeClasspath
+}
 }
 
 
