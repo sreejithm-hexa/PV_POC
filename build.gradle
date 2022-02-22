@@ -11,14 +11,12 @@ buildscript {
         }
     }
     dependencies {
-        classpath "mysql:mysql-connector-java:5.1.13"
+        classpath "mysql:mysql-connector-java:8.0.12"
         classpath "org.flywaydb:flyway-gragle-plugin:5.2.4"
     }
 }
 
-plugins {
-    id "org.flywaydb.flyway" version "8.5.0"
-}
+apply plugin: 'org.flywaydb.flyway'
 
 group = 'database'
 version = '0.0.1-SNAPSHOT'
