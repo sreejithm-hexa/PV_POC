@@ -29,6 +29,14 @@ plugins {
 }
 */
 
+configurations {
+    liquibaseRuntime.extendsFrom runtimeClasspath
+}
+dependencies {
+    liquibaseRuntime sourceSets.main.output
+}
+
+
 def changeLog = "/src/main/db/migration/changelog.xml"
 group = 'database'
 version = '0.0.1-SNAPSHOT'
