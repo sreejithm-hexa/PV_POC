@@ -18,7 +18,7 @@ buildscript {
         liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:3.0.0'
         liquibaseRuntime 'info.picocli:picocli:4.6.1'
         liquibaseRuntime 'mysql:mysql-connector-java:5.1.34'
-        
+        liquibaseRuntime 'org.liquibase.ext:liquibase-hibernate5:3.6' 
         classpath 'mysql:mysql-connector-java:8.0.28'
         classpath 'org.liquibase:liquibase-core:3.4.1'
         classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
