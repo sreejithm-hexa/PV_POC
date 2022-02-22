@@ -25,6 +25,9 @@ buildscript {
     }
 }
 
+configurations {
+  liquibaseRuntime.extendsFrom runtime
+}
 plugins {
   id 'org.liquibase.gradle' version '2.1.0'
 }
