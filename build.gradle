@@ -26,7 +26,7 @@ plugins {
   id 'org.liquibase.gradle' version '2.1.0'
 }
 
-/*repositories {
+repositories {
     mavenCentral()
      gradlePluginPortal()
 }
@@ -38,7 +38,7 @@ dependencies {
 }
 
 
-ext.springProps = new Properties()
+/*ext.springProps = new Properties()
 InputStream is = new FileInputStream("liquibase.properties")
 springProps.load(is)*/
 
@@ -58,12 +58,12 @@ liquibase {
         //properties.load(new FileInputStream(propsFile))
         changeLogFile 'src/main/resources/db/migration/changelog.xml'
         //classpath 'src/mysql-connector-java-8.0.22.jar'
-        driver 'com.mysql.jdbc.Driver'
-        url 'jdbc:mysql://3.22.94.249:3306/db1'
-        username 'sreejith'
-        password '@Admin123'
+        driver project.ext.driver //'com.mysql.jdbc.Driver'
+        url project.ext.url //'jdbc:mysql://3.22.94.249:3306/db1'
+        username project.ext.username //'sreejith'
+        password project.ext.password //'@Admin123'
     }
-    runList = main
+    //runList = main
   }
 }
 
