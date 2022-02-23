@@ -3,7 +3,7 @@
  *
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/7.4/samples
- */
+
 buildscript {
     repositories {
         maven {
@@ -18,13 +18,15 @@ buildscript {
         classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
        
     }
-}
+} */
+
 
 
 plugins {
   id 'org.liquibase.gradle' version '2.1.0'
 }
-repositories {
+
+/*repositories {
     mavenCentral()
      gradlePluginPortal()
 }
@@ -36,7 +38,7 @@ dependencies {
 }
 
 
-/*ext.springProps = new Properties()
+ext.springProps = new Properties()
 InputStream is = new FileInputStream("liquibase.properties")
 springProps.load(is)*/
 
@@ -52,18 +54,23 @@ liquibase {
   activities {
     main {
         //File propsFile = new File("liquibase.properties")
-      //Properties properties = new Properties()
-      //properties.load(new FileInputStream(propsFile))
-      changeLogFile 'src/main/resources/db/migration/changelog.xml'
-      //classpath 'src/mysql-connector-java-8.0.22.jar'
-      driver 'com.mysql.jdbc.Driver'
-      url 'jdbc:mysql://3.22.94.249:3306/db1'
-      username 'sreejith'
-      password '@Admin123'
+        //Properties properties = new Properties()
+        //properties.load(new FileInputStream(propsFile))
+        changeLogFile 'src/main/resources/db/migration/changelog.xml'
+        //classpath 'src/mysql-connector-java-8.0.22.jar'
+        driver 'com.mysql.jdbc.Driver'
+        url 'jdbc:mysql://3.22.94.249:3306/db1'
+        username 'sreejith'
+        password '@Admin123'
     }
-   //runList = main
+    runList = main
   }
 }
+
+
+
+
+
 /*liquibase {
     activities {
          main {
