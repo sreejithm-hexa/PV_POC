@@ -39,7 +39,7 @@ liquibase {
 	  driver 'com.mysql.jdbc.Driver'
       	  url 'jdbc:mysql://3.22.94.249:3306/DB'
 	  username 'sreejith'
-	  password '@Admin123'
+	  password '$pass'
     }
   }
 }
