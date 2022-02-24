@@ -30,13 +30,15 @@ dependencies {
   liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:3.0.0'
   liquibaseRuntime 'info.picocli:picocli:4.6.1'
   liquibaseRuntime 'mysql:mysql-connector-java:5.1.34'
+  implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
 }
 
 liquibase {
   activities {
     main {
-      changeLogFile 'src/main/resources/db/migration/changelogs.xml'
-      url 'jdbc:mysql://3.22.94.249:3306/DB'
+      	  changeLogFile 'src/main/resources/db/migration/changelogs.xml'
+	  driver 'com.mysql.jdbc.Driver'
+      	  url 'jdbc:mysql://3.22.94.249:3306/DB'
 	  username 'sreejith'
 	  password '@Admin123'
     }
