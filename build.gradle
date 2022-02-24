@@ -32,13 +32,14 @@ dependencies {
   liquibaseRuntime 'mysql:mysql-connector-java:8.0.28'
 }
 
-Properties props = new Properties()
+props = new Properties()
 props.load(new FileInputStream(file('liquibase.properties')))
-def database.driver = props.getProperty('driver')
-def database.url = props.getProperty('url')
-def database.username = props.getProperty('username')
-def database.password = props.getProperty('password')
-def database.changeLogFile = props.getProperty('changeLogFile')
+database = [:]
+database.driver = props.getProperty('driver')
+database.url = props.getProperty('url')
+database.username = props.getProperty('username')
+database.password = props.getProperty('password')
+database.changeLogFile = props.getProperty('changeLogFile')
 
 liquibase {
   activities {
