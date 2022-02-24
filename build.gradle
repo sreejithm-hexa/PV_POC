@@ -34,7 +34,6 @@ dependencies {
 
 Properties props = new Properties()
 props.load(new FileInputStream(file('liquibase.properties')))
-database = [:]
 database.driver = props.getProperty('driver')
 database.url = props.getProperty('url')
 database.username = props.getProperty('username')
