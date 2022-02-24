@@ -38,8 +38,8 @@ liquibase {
       	  changeLogFile 'src/main/resources/db/migration/changelog.xml'
 	  driver 'com.mysql.jdbc.Driver'
       	  url 'jdbc:mysql://3.22.94.249:3306/DB'
-	  username ='${user}'
-	  password ='${pass}'
+	  username '${user}'
+	  password '${pass}'
     }
   }
 }
