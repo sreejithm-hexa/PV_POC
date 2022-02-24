@@ -32,7 +32,7 @@ dependencies {
   liquibaseRuntime 'mysql:mysql-connector-java:8.0.28'
 }
 
-def props = new Properties()
+Properties props = new Properties()
 props.load(new FileInputStream(file('liquibase.properties')))
 database.driver = props.getProperty('driver')
 database.url = props.getProperty('url')
