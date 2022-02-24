@@ -12,7 +12,6 @@ buildscript {
     }
     dependencies {
         classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
-	classpath 'mysql:mysql-connector-java:8.0.28'
     }
 }
 
@@ -39,7 +38,7 @@ liquibase {
       	  changeLogFile 'src/main/resources/db/migration/changelog.xml'
 	  driver 'com.mysql.jdbc.Driver'
       	  url 'jdbc:mysql://3.22.94.249:3306/DB'
-	  username '${user}'
+	  username 'sreejith'
 	  password '${pass}'
     }
   }
