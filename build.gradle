@@ -7,6 +7,7 @@
 buildscript {
     repositories {
         mavenCentral()
+	gradlePluginPortal()
      
     }
     dependencies {
@@ -19,11 +20,18 @@ apply plugin: 'org.liquibase.gradle'
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
+dependencies {
+  liquibaseRuntime 'org.liquibase:liquibase-core:4.5.0'
+  liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:3.0.0'
+  liquibaseRuntime 'info.picocli:picocli:4.6.1'
+  liquibaseRuntime 'mysql:mysql-connector-java:5.1.34'
+}
+
 liquibase {
   activities {
     main {
       changeLogFile 'src/main/resources/db/migration/changelogs.xml'
-      url 'jdbc:mysql://3.22.84.249:3306/DB'
+      url 'jdbc:mysql://3.22.94.249:3306/DB'
 	  username 'sreejith'
 	  password '@Admin123'
     }
