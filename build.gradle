@@ -20,6 +20,11 @@ apply plugin: 'org.liquibase.gradle'
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
+repositories {
+        mavenCentral()
+	gradlePluginPortal()
+     
+    }
 dependencies {
   liquibaseRuntime 'org.liquibase:liquibase-core:4.5.0'
   liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:3.0.0'
