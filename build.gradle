@@ -6,27 +6,26 @@
  */
 buildscript {
     repositories {
-        maven {
-            url "https://repo1.maven.org/maven2"
-        }
-        //mavenCentral()
+        mavenCentral()
      
     }
     dependencies {
-        classpath 'mysql:mysql-connector-java:8.0.28'
-        classpath "org.flywaydb:flyway-gradle-plugin:5.2.4"
-        //classpath 'org.flywaydb:flyway-core:8.5.0'
+        classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
     }
 }
 
-apply plugin: 'org.flywaydb.flyway'
+apply plugin: 'org.liquibase.gradle'
 
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
-flyway {
-    url = 'jdbc:mysql://3.22.94.249:3306/db'
-    user = "${username}"
-    password = "${pass}"
-    //schemas = ['schema1', 'schema2', 'schema3']
+liquibase {
+  activities {
+    main {
+      changeLogFile 'src/main/resources/db/migration/changelogs.xml'
+      url 'jdbc:mysql://3.22.84.249:3306/DB'
+	  username 'sreejith'
+	  password '@Admin123'
+    }
+  }
 }
