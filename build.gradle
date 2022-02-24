@@ -12,6 +12,7 @@ buildscript {
     }
     dependencies {
         classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
+	classpath 'mysql:mysql-connector-java:8.0.21'
     }
 }
 
@@ -30,7 +31,6 @@ dependencies {
   liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:3.0.0'
   liquibaseRuntime 'info.picocli:picocli:4.6.1'
   liquibaseRuntime 'mysql:mysql-connector-java:5.1.34'
-  implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
 }
 
 liquibase {
