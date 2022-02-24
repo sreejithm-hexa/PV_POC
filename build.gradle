@@ -36,7 +36,7 @@ liquibase {
   activities {
     main {
       	  changeLogFile 'src/main/resources/db/migration/changelogs.xml'
-	  driver 'com.mysql.cj.jdbc.Driver'
+	  driver 'com.mysql.jdbc.Driver'
       	  url 'jdbc:mysql://3.22.94.249:3306/DB'
 	  username 'sreejith'
 	  password '@Admin123'
