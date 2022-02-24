@@ -20,6 +20,9 @@ apply plugin: 'org.liquibase.gradle'
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
+def user = '${username}'
+def pass = '${pass}'
+
 repositories {
         mavenCentral()
 	gradlePluginPortal()
@@ -38,7 +41,7 @@ liquibase {
       	  changeLogFile 'src/main/resources/db/migration/changelog.xml'
 	  driver 'com.mysql.jdbc.Driver'
       	  url 'jdbc:mysql://3.22.94.249:3306/DB'
-	  username 'sreejith'
+	  username '${user}'
 	  password '${pass}'
     }
   }
