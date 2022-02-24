@@ -35,6 +35,7 @@ dependencies {
 props = new Properties()
 props.load(new FileInputStream(file('liquibase.properties')))
 database = [:]
+database.driver = props.getProperty('driver')
 database.url = props.getProperty('url')
 database.username = props.getProperty('username')
 database.password = props.getProperty('password')
@@ -44,10 +45,10 @@ liquibase {
   activities {
     main {
       	  changeLogFile 'src/main/resources/db/migration/changelog.xml'
-	  driver 'database.url'
-      	  url 'database.username'
-	  username 'database.password'
-	  password 'database.changeLogFile'
+	  driver 'database.driver'
+      	  url 'database.url'
+	  username 'database.username'
+	  password 'database.password'
     }
   }
 }
