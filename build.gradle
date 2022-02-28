@@ -32,7 +32,7 @@ dependencies {
   liquibaseRuntime 'mysql:mysql-connector-java:8.0.28'
 }
 
-def props = new Properties()
+/*def props = new Properties()
 props.load(new FileInputStream(file('liquibase.properties')))
 database = [:]
 database.driver = props.getProperty('driver')
@@ -42,16 +42,14 @@ database.password = props.getProperty('password')
 database.changeLogFile = props.getProperty('changeLogFile')
 
 def props = new Properties()
-file("liquibase.properties").withInputStream { props.load(it) }
+file("liquibase.properties").withInputStream { props.load(it) }*/
 
 liquibase {
   activities {
     main {
       	  changeLogFile 'src/main/resources/db/migration/changelog.xml'
-	  driver 'database.driver'
-      	  url 'database.url'
-	  username 'database.username'
-	  password 'database.password'
+	  driver 'com.om.mysql.cj.jdbc.Driver'
+      	  url 'jdbc:mysql://3.22.94.249:3306/DB'
     }
   }
 }
