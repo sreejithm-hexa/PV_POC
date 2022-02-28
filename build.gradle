@@ -3,7 +3,7 @@
  *
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/7.4/samples
- */
+ 
 buildscript {
     repositories {
         mavenCentral()
@@ -12,19 +12,20 @@ buildscript {
     }
     dependencies {
         classpath "org.liquibase:liquibase-gradle-plugin:2.1.0"
-	liquibaseRuntime 'org.liquibase:liquibase-core:4.5.0'
-        liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:3.0.0'
-        liquibaseRuntime 'info.picocli:picocli:4.6.1'
-        liquibaseRuntime 'mysql:mysql-connector-java:8.0.28'
     }
 }
 
-apply plugin: 'org.liquibase.gradle'
+
+apply plugin: 'org.liquibase.gradle'*/
+
+plugins {
+  id 'org.liquibase.gradle' version '2.1.0'
+}
 
 group = 'database'
 version = '0.0.1-SNAPSHOT'
 
-/*repositories {
+repositories {
         mavenCentral()
 	gradlePluginPortal()
      
@@ -34,7 +35,8 @@ dependencies {
   liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:3.0.0'
   liquibaseRuntime 'info.picocli:picocli:4.6.1'
   liquibaseRuntime 'mysql:mysql-connector-java:8.0.28'
-}*/
+}
+
 
 /*def props = new Properties()
 props.load(new FileInputStream(file('liquibase.properties')))
