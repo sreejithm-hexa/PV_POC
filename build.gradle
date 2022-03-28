@@ -57,6 +57,8 @@ liquibase {
 	  driver 'com.mysql.jdbc.Driver'
       	  url 'jdbc:mysql://3.22.94.249:3306/'
 	  defaultSchemaName 'DB'
+	  username "${user}"
+	  password "${pass}"
     }
   }
 }
