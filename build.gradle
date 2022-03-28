@@ -28,5 +28,5 @@ flyway {
     url = 'jdbc:mysql://3.22.94.249:3306/'
     user = "${username}"
     password = "${pass}"
-    schemas = test-schema
+    schemas = ["test-schema"]
 }
