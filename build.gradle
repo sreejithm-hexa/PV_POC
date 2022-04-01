@@ -28,6 +28,6 @@ flyway {
     url = 'jdbc:mysql://3.22.94.249:3306/db'
     user = "${username}"
     password = "${pass}"
-    baselineOnMigrate = true
+    //baselineOnMigrate = true
     //schemas = ['schema1', 'schema2', 'schema3']
 }
